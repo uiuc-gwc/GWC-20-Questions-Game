@@ -37,7 +37,8 @@ def store_answer(choice):
   # Update the score and display it
   global score
   score += 1
-  score_label.config(text="Score: {}/{}".format(score, len(quiz_data)))
+  score_label.config(
+      text="Questions Answered: {}/{}".format(score, len(quiz_data)))
   #feedback_label.config(text="Correct!", foreground="green")
   #else:
   #feedback_label.config(text="Incorrect!", foreground="red")

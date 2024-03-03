@@ -1,15 +1,34 @@
 quiz_data = [{
-    "question": "What is the capital of France?",
-    "choices": ["Yes", "No"],
+    "question": "Is the character male/female",
+    "choices": ["No", "Yes"],
 }, {
-    "question": "What is the largest planet in our solar system?",
-    "choices": ["Yes", "No"],
+    "question": "Is there a movie about the character?",
+    "choices": ["No", "Yes"],
 }, {
-    "question": "What is the chemical symbol for gold?",
-    "choices": ["Yes", "No"],
+    "question": "Are the parents of the character dead?",
+    "choices": ["No", "Yes"],
 }, {
-    "question": "Which country is known as the 'Land of the Rising Sun'?",
-    "choices": ["Yes", "No"],
+    "question": "Does the character have long hair?",
+    "choices": ["No", "Yes"],
+}, {
+    "question": "Is the character socioeconomically disadvantaged?",
+    "choices": ["No", "Yes"],
+}, {
+    "question": "Does the character have dark hair?",
+    "choices": ["No", "Yes"],
+}, {
+    "question": "Are the character in a trio?",
+    "choices": ["No", "Yes"],
+}, {
+    "question": "Does the character have an archnemesis?",
+    "choices": ["No", "Yes"],
+}, {
+    "question": "Is the character 6ft+?",
+    "choices": ["No", "Yes"],
+}, {
+    "question": "Does the character have a pet?",
+    "choices": ["No", "Yes"],
 }
+
              # Add more questions here
              ]
