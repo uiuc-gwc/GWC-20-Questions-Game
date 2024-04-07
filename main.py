@@ -5,6 +5,10 @@ from quiz_data import quiz_data
 import numpy as np
 '''Game Logic'''
 
+import pandas as pd
+
+csv = pd.read_csv("./data.csv")
+
 
 def compute_entropy(arr):
   ratio = np.sum(arr) / len(arr)
@@ -13,11 +17,11 @@ def compute_entropy(arr):
   return -np.log2(ratio) * ratio - np.log2(1 - ratio) * (1 - ratio)
 
 
-num_of_q = 10
-num_of_char = 10
-randomTable = np.random.randint(2, size=(num_of_char, num_of_q))
-appMe = np.arange(0, num_of_char, dtype='int')
-randomTable = np.concatenate((appMe[:, None], randomTable), axis=1)
+#randomTable = np.random.randint(2, size=(num_of_char, num_of_q))
+randomTable = (csv.to_numpy()[:, :])
+
+#appMe = np.arange(0, 40, dtype='int')
+#randomTable = np.concatenate((appMe[:, None], randomTable), axis=1)
 table = randomTable
 
 
@@ -65,7 +69,7 @@ def compute_character(all_answers):
 # Function to display the current question and choices
 def show_question():
   # Get the current question from the quiz_data list
-  question = quiz_data[current_question]
+  question = quiz_data[current_question - 1]
   qs_label.config(text=question["question"])
 
   # Display the choices on the buttons

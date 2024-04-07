@@ -1,0 +1,42 @@
+"1 = Yes, 0 = No",Does this person have a romantic relationship,Do they have colored eyes?,broke?,Is the character M?,Is the character a real person?,Is the character involved in music?,Are they smart?,Is the person athletic?,Are they over 30?,Is the person creative?,Is the person historical?,Is this person dead?,Is this person Tall,Thick?
+Harry Potter,1,1,1,1,0,0,1,0,0,1,0,0,0,0
+Barbie,1,1,0,0,0,0,0,0,0,1,0,0,0,0
+Batman,0,0,0,1,0,0,1,1,0,0,0,0,1,1
+Messi,1,0,0,1,1,0,0,1,1,0,0,0,0,0
+Brad Pitt,1,1,0,1,1,0,0,1,1,1,0,0,0,0
+Olivia Rodrigo,1,0,0,0,1,1,0,0,0,1,0,0,0,0
+Jojo Siwa,0,1,0,0,1,1,0,0,0,1,0,0,0,0
+Moana,0,0,1,0,0,0,1,1,0,1,0,0,0,0
+Kanye West,1,0,0,1,1,0,0,0,1,1,0,0,0,1
+Percy Jackson,1,1,1,1,0,0,1,1,0,0,0,0,0,0
+Gandalf,0,1,0,1,0,0,1,0,1,0,1,0,0,0
+Kim Kardashian,1,0,0,0,1,0,0,0,1,1,0,0,0,1
+Katniss,1,0,1,0,0,0,1,1,0,0,0,0,0,0
+Peeta,1,0,1,1,0,0,1,1,0,0,0,0,0,0
+Sherlock,0,1,0,1,0,0,1,1,1,0,0,0,1,0
+"Hermione
+",1,0,1,0,0,0,1,0,0,0,0,0,0,0
+Bella,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+Edward,1,1,0,1,0,0,1,0,1,0,0,0,0,0
+Lady Gaga,1,0,0,0,1,1,0,0,1,1,0,0,0,0
+Selena Gomez,1,0,0,0,1,0,0,0,1,1,0,0,0,1
+LeBron James,1,0,0,1,1,0,0,1,1,1,0,0,1,0
+Serena Williams,1,0,0,0,1,0,1,1,1,1,0,0,0,0
+Usian Bolt,1,0,0,1,1,0,0,1,1,0,0,0,1,0
+Aang,1,0,0,1,0,0,0,0,1,0,0,1,0,0
+Johnny Depp,0,0,0,1,1,1,0,0,1,0,0,0,0,0
+Mulan,1,1,0,0,0,1,1,1,0,0,0,0,0,0
+Napoleon,0,1,0,1,1,0,1,0,1,0,1,1,0,0
+Humpty Dumpty,0,0,1,1,0,1,0,0,0,0,0,1,0,1
+Justin Bieber,1,0,0,1,1,1,1,1,0,1,0,0,0,0
+Ice Spice,1,0,0,0,1,1,0,1,0,1,0,0,0,1
+Adam Sandler,1,0,0,1,1,0,0,0,1,1,0,0,0,1
+Jennifer Aniston,1,0,0,0,1,0,0,0,1,1,0,0,0,0
+Caillou,0,0,0,1,0,0,1,1,0,1,0,0,0,0
+Santa Klaus,0,1,0,1,0,0,1,0,1,1,1,0,0,1
+Mary Poppins,0,1,0,0,0,1,1,0,1,1,0,0,0,0
+Shrek ,1,0,1,1,0,0,0,0,1,1,0,0,1,1
+John Quincy Adams,1,0,0,1,1,0,1,0,0,0,1,1,0,0
+Lighting McQueen,1,1,0,1,0,0,1,0,0,0,0,0,0,0
+Cardi B,1,0,0,0,0,0,0,0,1,0,0,1,0,0
+Hirish Chandrasekaran,0,0,1,0,1,1,0,0,1,1,0,0,0,1
