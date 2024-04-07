@@ -2,6 +2,58 @@ import tkinter as tk
 from tkinter import messagebox, ttk
 from ttkbootstrap import Style
 from quiz_data import quiz_data
+import numpy as np
+'''Game Logic'''
+
+
+def compute_entropy(arr):
+  ratio = np.sum(arr) / len(arr)
+  if ratio == 0 or ratio == 1:
+    return 0
+  return -np.log2(ratio) * ratio - np.log2(1 - ratio) * (1 - ratio)
+
+
+num_of_q = 10
+num_of_char = 10
+randomTable = np.random.randint(2, size=(num_of_char, num_of_q))
+appMe = np.arange(0, num_of_char, dtype='int')
+randomTable = np.concatenate((appMe[:, None], randomTable), axis=1)
+table = randomTable
+
+
+def compute_entropy_table(table):
+  entropies = []
+  for j in range(1, table.shape[1]):
+    entropies.append(compute_entropy(table[:, j]))
+  return entropies
+
+
+#Helper Functions
+def get_max_index(arr):
+  if np.max(arr) == 0:
+    return None
+  return np.argmax(arr) + 1
+
+
+def subset(table, col_index, value):
+  #subset the table by all rows where the col given by col_index, is equal to value
+  return table[table[:, col_index] == value, :]
+
+
+def give_next_question(table):
+  entropies = compute_entropy_table(table)
+  return get_max_index(entropies)
+
+
+def compute_next_table(table, question_ind, answer):
+  #subset the table by rows based on the question and answer
+  new_table = subset(table, question_ind, answer)
+  #get rid of the column where we asked the question to avoid asking it again
+  new_table[:, question_ind] = 0
+  return new_table
+
+
+'''Game Logic'''
 
 all_answers = []
 
@@ -30,7 +82,11 @@ def show_question():
 # Function to check the selected answer and provide feedback
 def store_answer(choice):
   all_answers.append(choice)
-  print(all_answers)
+  #print(all_answers)
+  global table
+  print(table)
+  print(current_question)
+  table = compute_next_table(table, current_question, all_answers[-1])
   # Get the current question from the quiz_data list
   # Check if the selected choice matches the correct answer
   #if selected_choice == question["answer"]:
@@ -51,16 +107,16 @@ def store_answer(choice):
 # Function to move to the next question
 def next_question():
   global current_question
-  current_question += 1
+  print(table)
+  current_question = give_next_question(table)
 
-  if current_question < len(quiz_data):
+  if current_question != None and table.shape[0] >= 2:
     # If there are more questions, show the next question
     show_question()
   else:
     # If all questions have been answered, display the final score and end the quiz
-    messagebox.showinfo(
-        "Quiz Completed",
-        "Quiz Completed!, Final Guess " + str(compute_character(all_answers)))
+    messagebox.showinfo("Quiz Completed",
+                        "Quiz Completed!, Final Guess " + str(table[0, 0]))
     root.destroy()
 
 
@@ -110,7 +166,7 @@ next_btn.pack(pady=10)
 current_question = 0
 
 # Show the first question
-show_question()
+next_question()
 
 # Start the main event loop
 root.mainloop()
